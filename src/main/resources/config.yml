@@ -1,0 +1,38 @@
+messages:
+  # Colors and formatting codes are supported, but must begin with "§"
+  
+  # A percent symbol indicates a variable. Only variables that are
+  # relevant to the command are supported for that command.
+  
+  # WARNING: The plugin assumes that all the values are present and
+  #          provided in the correct form! If that is not the case,
+  #          unexpected behaviour (crashes, bugs, etc) WILL occur!
+  
+  read: "§bReceiving your mail..."
+  read-message: "§8[ §5#%n§8 : §5%d§8 : §5%t§8 ] §e%u§f: %m"
+  no-messages: "§eSorry, you have no new mail messages."
+  
+  delete: "§9That message has been deleted."
+  delete-multiple: "§9Those messages have been deleted."
+  send: "§9Your message has been sent."
+  clear: "§9Your messages have been cleared."
+
+  read-error: "§cError while reading that message."
+  delete-error: "§cError while deleting that message."
+  delete-multiple-error: "§cError while deleting those messages."
+  clear-error: "§cError while clearing your messages."
+  send-error: "§cError while sending your message."
+  
+  number-error: "§cError while getting the message number."
+  int-error: "§cSorry, that number is too large."
+  
+  invalid-page: "§cSorry, that page §e%p§c does not exist."  
+  invalid-message: "§cSorry, that message §e%m§c does not exist."
+  invalid-messages: "§cSorry, messages §e%m§c do not exist."
+  invalid-player: "§cSorry, that player §e%u§c does not exist."
+  invalid-players: "§cSorry, players §e%u§c do not exist."
+
+  non-player: "Error: This command can only be run by a player."
+  
+options:
+  page-size: 4

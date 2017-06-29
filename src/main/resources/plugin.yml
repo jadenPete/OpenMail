@@ -1,0 +1,26 @@
+name: ${name}
+version: ${version}
+description: ${description}
+author: ${author}
+website: ${url}
+
+main: ${mainClass}
+
+commands:
+  mail:
+    description: Manages a player's mail.
+    usage: |
+      §8§m----------------------------------§r
+      §8(§5Mail§8)§e Help Documentation
+      §8(§5Mail§8)§6   /mail page <#>
+      §8(§5Mail§8)§6   /mail read <#>
+      §8(§5Mail§8)§6   /mail delete <#>
+      §8(§5Mail§8)§6   /mail delete <#>,<#>
+      §8(§5Mail§8)§6   /mail delete <#> (to) <#>
+      §8(§5Mail§8)§6   /mail clear
+      §8(§5Mail§8)§6   /mail send <player> <message>
+      §8(§5Mail§8)§6   /mail send <player>,<player> <message>
+      §8§m----------------------------------§r
+    
+    permission: openmail.basic
+
