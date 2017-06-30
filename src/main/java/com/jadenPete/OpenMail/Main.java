@@ -6,7 +6,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 /*
  * This class is responsible for:
  *   - Starting and stopping the plugin.
- *   - Providing usefull functions to other classes.
  *     
  * It does not do anything on it's own.
  * It's sole purpose is to manage the plugin
