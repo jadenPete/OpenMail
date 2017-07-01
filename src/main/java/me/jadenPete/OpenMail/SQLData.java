@@ -1,4 +1,4 @@
-package com.jadenPete.OpenMail;
+package me.jadenPete.OpenMail;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

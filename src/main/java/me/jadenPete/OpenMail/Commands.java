@@ -1,4 +1,4 @@
-package com.jadenPete.OpenMail;
+package me.jadenPete.OpenMail;
 
 import org.bukkit.configuration.file.FileConfiguration;
 
