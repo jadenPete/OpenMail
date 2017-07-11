@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.jadenPete</groupId>
   <artifactId>OpenMail</artifactId>
-  <version>1.0.2-RELEASE</version>
+  <version>1.0.3-RELEASE</version>
   
   <name>OpenMail</name>
   <description>Mail plugin for Spigot that uses MySQL.</description>

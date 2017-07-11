@@ -79,7 +79,7 @@ public class Commands implements CommandExecutor {
 						// Carry on with the sub-command if one/two numbers are specified.
 						// Otherwise return false and show the command's usage.
 						if(args.length == 2){
-							if(!args[1].matches("[0-9]+")){
+							if(!args[1].matches("[0-9]+(,[0-9]+)*")){
 								return false;
 							}
 						} else if(args.length == 3){

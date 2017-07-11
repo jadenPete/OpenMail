@@ -121,15 +121,9 @@ public class SQLData {
 		}
 	}
 	
-	// Delete message from a player's inbox
-	public static boolean deleteMail(Player player, int number){
+	// Recalculate all message numbers but preserve the order.
+	public static boolean numberMail(Player player){
 		try {
-			// Delete the message
-			String query = "delete from mail where player='" + player.getUniqueId() + "' and number='" + number + "'";
-			PreparedStatement ps = connection.prepareStatement(query);
-
-			ps.executeUpdate();
-			
 			// Recalculate all message numbers but preserve the order.
 			String query2 = "select number from mail where player='" + player.getUniqueId() + "' order by number";
 			PreparedStatement ps2 = connection.prepareStatement(query2, ResultSet.TYPE_SCROLL_INSENSITIVE);
@@ -148,8 +142,21 @@ public class SQLData {
 			
 			return true;
 		} catch(Exception e){
-			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	// Delete message from a player's inbox
+	public static boolean deleteMail(Player player, int number){
+		try {
+			// Delete the message
+			String query = "delete from mail where player='" + player.getUniqueId() + "' and number='" + number + "'";
+			PreparedStatement ps = connection.prepareStatement(query);
+
+			ps.executeUpdate();
 			
+			return true;
+		} catch(Exception e){
 			return false;
 		}
 	}

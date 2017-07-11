@@ -228,7 +228,7 @@ public class Util {
 						invalidNumbers += ", ";
 					}
 					
-					invalidNumbers += numbers[a];
+					invalidNumbers += (numbers[a] + a);
 					invalidNumberCount++;
 				}
 			// If there was an error reading it in the
@@ -238,8 +238,8 @@ public class Util {
 			}
 		}
 		
-		// If there was an error deleting some or all of the messages, tell the player.
-		if(deleteError){
+		// If there was an error deleting/numbering some or all of the messages, tell the player.
+		if(!SQLData.numberMail(player) || deleteError){
 			if(args.length == 2){
 				player.sendMessage(config.getString("messages.delete-error"));
 			} else {
