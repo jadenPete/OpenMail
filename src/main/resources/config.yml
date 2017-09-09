@@ -10,6 +10,9 @@ messages:
   
   read: "§bReceiving your mail..."
   read-message: "§8[ §5#%n§8 : §5%d§8 : §5%t§8 ] §e%u§f: %m"
+  
+  new-message: "§aYou have 1 new message (/mail read)"
+  new-messages: "§aYou have %n new messages (/mail read)"
   no-messages: "§eSorry, you have no new mail messages."
   
   delete: "§9That message has been deleted."

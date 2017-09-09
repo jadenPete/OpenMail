@@ -9,9 +9,9 @@ import org.bukkit.entity.Player;
 
 /*
  * This class is responsible for:
- *   - Parsing commands and only checking
- *     that arguments contain the right characters
- *     and are provided in the right amount.
+ *	- Parsing commands and only checking
+ *		that arguments contain the right characters
+ *		and are provided in the right amount.
  * 
  * It does not do anything on it's own.
  * It does not interact with the MySQL database in any way.
@@ -84,7 +84,7 @@ public class Commands implements CommandExecutor {
 							}
 						} else if(args.length == 3){
 							if(!args[1].matches("[0-9]+") ||
-							   !args[2].matches("[0-9]+")){
+								!args[2].matches("[0-9]+")){
 								return false;
 							}
 						} else {
@@ -108,15 +108,15 @@ public class Commands implements CommandExecutor {
 					
 					case "send":{
 						/* 
-						 * Carry on with the sub-command if at least two arguments are specified.
-						 * Otherwise return false and show the command's usage.
-						 *
-						 * If two arguments are specified, check that the first argument is a single,
-						 * alpha-numeric username or a list of alpha-numeric usernames separated by commas.
-						 *
-						 * If three arguments are specified, check that the
-						 * first and second are alpha-numeric usernames.
-						 */
+						* Carry on with the sub-command if at least two arguments are specified.
+						* Otherwise return false and show the command's usage.
+						*
+						* If two arguments are specified, check that the first argument is a single,
+						* alpha-numeric username or a list of alpha-numeric usernames separated by commas.
+						*
+						* If three arguments are specified, check that the
+						* first and second are alpha-numeric usernames.
+						*/
 						
 						if(args.length == 3){
 							if(!args[1].matches("[a-zA-Z0-9_]+(,[a-zA-Z0-9_]+)*") &&
@@ -126,8 +126,8 @@ public class Commands implements CommandExecutor {
 						} else if(args.length == 4){
 							if(!args[1].matches("[a-zA-Z0-9_]+") ||
 								args[1].length() < 3 || args[1].length() > 16 ||
-							   !args[2].matches("[a-zA-Z0-9_]+") ||
-							    args[2].length() < 3 || args[2].length() > 16){
+								!args[2].matches("[a-zA-Z0-9_]+") ||
+									args[2].length() < 3 || args[2].length() > 16){
 								return false;
 							}
 						} else {

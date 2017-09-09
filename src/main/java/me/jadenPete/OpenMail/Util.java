@@ -10,12 +10,12 @@ import org.bukkit.entity.Player;
 
 /*
  * This class is responsible for:
- *   - Interacting with the user.
- *   - Handling and reporting errors.
- *   - Making sure that provided data is valid, but
- *     assuming that it contains the right characters
- *     and is provided in the right amount.
- *   - Providing usefull functions to other classes.
+ *	- Interacting with the user.
+ *	- Handling and reporting errors.
+ *	- Making sure that provided data is valid, but
+ *		assuming that it contains the right characters
+ *		and is provided in the right amount.
+ *	- Providing usefull functions to other classes.
  * 
  * It does not interact with the MySQL database in any way.
  * It's sole purpose is to be called upon by onCommand.
@@ -335,6 +335,17 @@ public class Util {
 		}
 	}
 	
+	// If the player has new mail, send them a notification.
+	public static void sendNotification(Player player){
+		int number = SQLData.getNumber(player.getName());
+		
+		if(number == 1){
+			player.sendMessage(config.getString("messages.new-message"));
+		} else if(number > 1){
+			player.sendMessage(config.getString("messages.new-messages").replace("%n", String.valueOf(number)));
+		}
+	}
+	
 	// Sort out the invalid players from a specified list of players.
 	@SuppressWarnings("deprecation")
 	public static String getInvalidPlayers(String[] players){
@@ -344,7 +355,7 @@ public class Util {
 		// and add the invalid players to a new one.
 		for(int a = 0; a < players.length; a++){
 			if(Bukkit.getPlayer(players[a]) == null &&
-			  !Bukkit.getOfflinePlayer(players[a]).hasPlayedBefore()){
+				!Bukkit.getOfflinePlayer(players[a]).hasPlayedBefore()){
 				if(invalidPlayers != ""){
 					invalidPlayers += ", ";
 				}

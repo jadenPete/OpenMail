@@ -3,14 +3,14 @@
 ```
 ----------------------------------
 (Mail) Help Documentation
-(Mail)   /mail page <#>
-(Mail)   /mail read <#>
-(Mail)   /mail delete <#>
-(Mail)   /mail delete <#>,<#>
-(Mail)   /mail delete <#> (to) <#>
-(Mail)   /mail clear
-(Mail)   /mail send <player> <message>
-(Mail)   /mail send <player>,<player> <message>
+(Mail)	/mail page <#>
+(Mail)	/mail read <#>
+(Mail)	/mail delete <#>
+(Mail)	/mail delete <#>,<#>
+(Mail)	/mail delete <#> (to) <#>
+(Mail)	/mail clear
+(Mail)	/mail send <player> <message>
+(Mail)	/mail send <player>,<player> <message>
 ----------------------------------
 ```
 

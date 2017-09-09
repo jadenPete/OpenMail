@@ -4,8 +4,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 /*
  * This class is responsible for:
- *   - Starting and stopping the plugin.
- *     
+ *	- Starting and stopping the plugin.
+ *		
  * It does not do anything on it's own.
  * It's sole purpose is to manage the plugin
  * and call the Commands class to operate.
@@ -24,6 +24,9 @@ public class Main extends JavaPlugin{
 		
 		// When the plugin command is used, call onCommand in the Commands class.
 		getCommand("mail").setExecutor(new Commands(this));
+		
+		// Register plugins in Events
+		getServer().getPluginManager().registerEvents(new Events(), this);
 		
 		// Connect to the MySQL Database.
 		SQLData.getConnection();

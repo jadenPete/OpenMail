@@ -10,13 +10,13 @@ import org.bukkit.entity.Player;
 
 /*
  * This class is responsible for:
- *   - Connecting to the plugin's MySQL database.
- *   - Reading from the plugin's MySQL database.
- *   - Writing to the plugin's MySQL database.
- *   
+ *	- Connecting to the plugin's MySQL database.
+ *	- Reading from the plugin's MySQL database.
+ *	- Writing to the plugin's MySQL database.
+ *	
  * It assumes that all data provided to it is valid,
  * and only handles errors related to MySQL.
- *   
+ *	
  * It does not interact with the player or the chat in any way.
  * It's sole purpose is to be called upon by the Commands class.
  */
@@ -76,16 +76,16 @@ public class SQLData {
 	
 	// Read mail from a player's inbox
 	/* Return Object[] structure:
-	 * 0 - Return status
-	 *   2 - Exists
-	 *   1 - Doesn't Exist
-	 *   0 - Error 
-	 * 1 - Sender
-	 * 2 - Number
-	 * 3 - Date
-	 * 4 - Time
-	 * 5 - Message
-	 */
+	* 0 - Return status
+	*	2 - Exists
+	*	1 - Doesn't Exist
+	*	0 - Error 
+	* 1 - Sender
+	* 2 - Number
+	* 3 - Date
+	* 4 - Time
+	* 5 - Message
+	*/
 	public static Object[] readMail(Player player, int number){
 		try {
 			String query = "select number from mail where player='" + player.getUniqueId() + "' and number='" + number + "'";
